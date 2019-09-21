@@ -11,8 +11,7 @@
 |
 */
 
-Route::resource('task','ATGController');
-Route::get('/', function(){
-	return redirect()->route('task.index');
+Route::get('/', function () {
+    return view('welcome');
 });
-
+Route::post('/post','PostController@receiveData')->name('postData');
